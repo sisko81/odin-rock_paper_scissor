@@ -17,9 +17,14 @@ const result = computerPlay()
 
 function playRound(playerSelection, computerSelection) {
     // your code here!
-    if(playerSelection ==='rock' )  {
-        console.log('I chose rock')
+    if(computerSelection === 'scissor')  {
+        console.log('The computer randomly selected scissor!')
+    } else if(computerSelection === 'paper') {
+        console.log('The computer randomly selected paper!')
+    } else if(computerSelection === 'rock') {
+        console.log('The computer randomly selected rock!')
     }
+    return computerSelection
   }
   let myResults = playRound()
   const playerSelection = 'rock';
