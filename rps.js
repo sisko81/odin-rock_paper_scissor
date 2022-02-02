@@ -17,19 +17,33 @@ const result = computerPlay()
 
 function playRound(playerSelection, computerSelection) {
     // your code here!
-    if(computerSelection === 'scissor')  {
-        console.log('The computer randomly selected scissor!')
-    } else if(computerSelection === 'paper') {
-        console.log('The computer randomly selected paper!')
-    } else if(computerSelection === 'rock') {
-        console.log('The computer randomly selected rock!')
-    }
-    return computerSelection
+    if(playerSelection === 'rock' && computerSelection === 'paper'  )  {
+        console.log('You Lose! Paper beats Rock')
+    } else if(playerSelection === 'rock' && computerSelection === 'scissor') {
+        console.log('You win! rock breaks scissor')
+    } else if(playerSelection === 'rock' && computerSelection === 'rock') {
+        console.log('Tie game!')
+    } else if(playerSelection === 'paper' && computerSelection === 'rock') {
+        console.log('You win! paper covers rock')
+    } else if(playerSelection === 'paper' && computerSelection === 'scissor') {
+        console.log('You lose! scissor beats paper')
+    } else if(playerSelection === 'paper' && computerSelection === 'paper') {
+        console.log('Tie game!')
+    } else if(playerSelection === 'scissor' && computerSelection === 'paper') {
+        console.log('You win! scissor cuts paper')
+    } else if(playerSelection === 'scissor' && computerSelection === 'rock') {
+        console.log('You lose! rock beats scissor')
+    } else if(playerSelection === 'scissor' && computerSelection === 'scissor') {
+        console.log('Tie game!')
+    } 
+    return playerSelection, computerSelection
   }
   let myResults = playRound()
-  const playerSelection = 'rock';
+  let playerSelection = 'rock';
+  playerSelection = prompt('', '')
   const computerSelection = computerPlay();
-  console.log(playRound(playerSelection, computerSelection));
+  console.log(playRound(playerSelection,computerSelection));
+  
 
 
 
