@@ -1,9 +1,13 @@
 // Create a function with the name computerPlay
 
 function computerPlay() {
-    
+// code here
+
 }
 
+// It's good practice to invoke your function even before writing the code.
+
+computerPlay()
 
 
 
