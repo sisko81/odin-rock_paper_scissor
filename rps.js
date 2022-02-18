@@ -1,4 +1,8 @@
+// Create a function with the name computerPlay
 
+function computerPlay() {
+    
+}
 
 
 
