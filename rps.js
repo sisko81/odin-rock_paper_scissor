@@ -31,6 +31,8 @@ console.log(computerPlay())
 //Next_step: turn the above computerPlay function into an arrow function.
 
 
+//Write a function that plays a single round of Rock Paper Scissors.
+//Name the function playRound.
 
 
 
