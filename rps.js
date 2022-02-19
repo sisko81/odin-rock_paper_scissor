@@ -1,6 +1,6 @@
 // Create a function with the name computerPlay
 
-function computerPlay() {
+let computerPlay = () => {
     
     //Inside this function declare two variables.
 
