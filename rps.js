@@ -36,6 +36,10 @@ console.log(computerPlay())
 
 function playRound(playerSelection, computerSelection) {
 
+    //return a string that states the winner of the round 
+    //like so: "You win! Rock beats Scissor.
+    
+
 }
 
 playRound()
