@@ -32,9 +32,13 @@ console.log(computerPlay())
 
 
 //Write a function that plays a single round of Rock Paper Scissors.
-//Name the function playRound.
+//Name the function playRound, and give it two parameters named playerSelection and computerSelection.
 
+function playRound(playerSelection, computerSelection) {
 
+}
+
+playRound()
 
 
 
