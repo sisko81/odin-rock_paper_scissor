@@ -28,6 +28,8 @@ computerPlay()
 console.log(computerPlay())
 
 
+//Next_step: turn the above computerPlay function into an arrow function.
+
 
 
 
