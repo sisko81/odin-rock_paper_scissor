@@ -1,7 +1,16 @@
 // Create a function with the name computerPlay
 
 function computerPlay() {
-// code here
+
+    //Inside this function declare two variables.
+
+    let computerList = ['rock', 'paper', 'scissor'];
+    let computerRandomList = computerList[Math.floor(Math.random() * 3)];
+
+    /*The first variable will be and array list, with the values of:
+       rock, paper and scissor.
+       The second variable will generate a random list 
+       with the help of math. floor and math.random methods the length is 3 so multiply by 3*/
 
 }
 
