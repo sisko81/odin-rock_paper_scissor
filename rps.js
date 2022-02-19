@@ -25,8 +25,8 @@ computerPlay()
 //Pro_Tip: use the console to make sure this is returning the expected output before moving to the next step!
 //computerPlay function holds the value of computerRandomList inside the local scope.
 //The output will be random.
+//console.log(computerPlay())
 console.log(computerPlay())
-
 
 //Next_step: turn the above computerPlay function into an arrow function.
 
@@ -37,12 +37,15 @@ console.log(computerPlay())
 function playRound(playerSelection, computerSelection) {
 
     //return a string that states the winner of the round 
-    //like so: "You win! Rock beats Scissor.
+    //like so: You win! Rock beats Scissor.
     
-
+    if(playerSelection === 'rock' && computerSelection === 'scissor') {
+        return'You win! Rock beats Scissor';
+    }
 }
 
 playRound()
+
 
 
 
