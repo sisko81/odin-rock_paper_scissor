@@ -12,6 +12,9 @@ function computerPlay() {
        The second variable will generate a random list 
        with the help of math. floor and math.random methods the length is 3 so multiply by 3*/
 
+    // Return the computerRandomList, it will be used later on.
+    return computerRandomList;
+
 }
 
 // It's good practice to invoke your function even before writing the code.
