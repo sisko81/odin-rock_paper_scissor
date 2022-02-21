@@ -20,13 +20,12 @@ let computerPlay = () => {
 
 // It's good practice to invoke your function even before writing the code.
 
-computerPlay();
+//computerPlay();
 
 //Pro_Tip: use the console to make sure this is returning the expected output before moving to the next step!
 //computerPlay function holds the value of computerRandomList inside the local scope.
 //The output will be random.
-//console.log(computerPlay())
-console.log(computerPlay());
+//console.log(computerPlay());
 
 //Next_step: turn the above computerPlay function into an arrow function.
 
@@ -38,13 +37,19 @@ function playRound(playerSelection, computerSelection) {
 
     //return a string that states the winner of the round 
     //like so: You win! Rock beats Scissor.
+    //The first IF statement will return a draw.
     
-    if(playerSelection === 'rock' && computerSelection === 'scissor') {
-        return'You win! Rock beats Scissor';
+    if(playerSelection ===  computerSelection) {
+        return 'draw'; // A draw will be returned IF playerSelection and computerSelection match.
+    } else if(playerSelection === 'rock' && computerSelection === 'scissor') {
+        return 'You win! Rock beats Scissor' //IF the playerSelection is 'rock' AND computerSelection is 'scissor' the player wins the round.The rest of the code block follow the same logic.
     }
+
+    //return the parameters to store the values.
+    return playerSelection, computerSelection
 }
 
-playRound();
+
 
 //The two parameters playerSelection and computerSelection have no value at the moment.
 //A variable need to be assigned to them like so
@@ -52,9 +57,12 @@ playRound();
  //The value of this variable will be rock paper or scissor, 
  //also catch the logic inside the above IF statement
  // along with the computerSelection variable.
- 
+
 let playerSelection = 'rock'; 
-let computerSelection = computerPlay();
+const computerSelection = computerPlay();
+console.log(playRound(playerSelection, computerSelection));
+console.log(computerSelection)
+
 
 
 
