@@ -20,13 +20,13 @@ let computerPlay = () => {
 
 // It's good practice to invoke your function even before writing the code.
 
-computerPlay()
+computerPlay();
 
 //Pro_Tip: use the console to make sure this is returning the expected output before moving to the next step!
 //computerPlay function holds the value of computerRandomList inside the local scope.
 //The output will be random.
 //console.log(computerPlay())
-console.log(computerPlay())
+console.log(computerPlay());
 
 //Next_step: turn the above computerPlay function into an arrow function.
 
@@ -44,12 +44,17 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-playRound()
+playRound();
 
 //The two parameters playerSelection and computerSelection have no value at the moment.
 //A variable need to be assigned to them like so
 
-let playerSelection = 'rock'  //The value of this variable will be rock paper or scissor.
+ //The value of this variable will be rock paper or scissor, 
+ //also catch the logic inside the above IF statement
+ // along with the computerSelection variable.
+ 
+let playerSelection = 'rock'; 
+let computerSelection = computerPlay();
 
 
 
