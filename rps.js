@@ -42,7 +42,17 @@ function playRound(playerSelection, computerSelection) {
     if(playerSelection ===  computerSelection) {
         return 'draw'; // A draw will be returned IF playerSelection and computerSelection match.
     } else if(playerSelection === 'rock' && computerSelection === 'scissor') {
-        return 'You win! Rock beats Scissor' //IF the playerSelection is 'rock' AND computerSelection is 'scissor' the player wins the round.The rest of the code block follow the same logic.
+        return 'You win! Rock breaks Scissor' //IF the playerSelection is 'rock' AND computerSelection is 'scissor' the player wins the round.The rest of the code block follow the same logic.
+    } else if(playerSelection === 'rock' && computerSelection === 'paper') {
+        return 'You lose! paper beats rock' 
+    } else if(playerSelection === 'paper' && computerSelection === 'rock') {
+        return 'You Win! Paper covers rock' 
+    } else if(playerSelection === 'paper' && computerSelection === 'scissor') {
+        return 'You lose! scissor beats paper' 
+    } else if(playerSelection === 'scissor' && computerSelection === 'paper') {
+        return 'You Win! Scissor cuts paper' 
+    } else if(playerSelection === 'scissor' && computerSelection === 'rock') {
+        return 'You lose! rock beats scissor' 
     }
 
     //return the parameters to store the values.
@@ -58,13 +68,13 @@ function playRound(playerSelection, computerSelection) {
  //also catch the logic inside the above IF statement
  // along with the computerSelection variable.
 
-let playerSelection = 'rock'; 
+let playerSelection = 'scissor'; 
 const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
 console.log(computerSelection)
 
 
-
+//At this point you should be able to play a single round in the console.
 
 
 
