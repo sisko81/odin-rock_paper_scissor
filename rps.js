@@ -46,7 +46,10 @@ function playRound(playerSelection, computerSelection) {
 
 playRound()
 
+//The two parameters playerSelection and computerSelection have no value at the moment.
+//A variable need to be assigned to them like so
 
+let playerSelection = 'rock'  //The value of this variable will be rock paper or scissor.
 
 
 
