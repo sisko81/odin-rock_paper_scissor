@@ -33,7 +33,7 @@ let computerPlay = () => {
 //Write a function that plays a single round of Rock Paper Scissors.
 //Name the function playRound, and give it two parameters named playerSelection and computerSelection.
 
-function playRound(playerSelection, computerSelection) {
+let playRound = (playerSelection, computerSelection) => {
 
     //return a string that states the winner of the round 
     //like so: You win! Rock beats Scissor.
@@ -77,6 +77,9 @@ console.log(computerSelection);
 
 //At this point you should be able to play a single round in the console with the code above.
 
+//Before moving on turn the playRound function into an arrow function.
+
+//Create the final function name it game() and make it an arrow function.
 
 
 
