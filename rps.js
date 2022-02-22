@@ -68,7 +68,8 @@ function playRound(playerSelection, computerSelection) {
  //also catch the logic inside the above IF statement
  // along with the computerSelection variable.
 
-let playerSelection = 'scissor'; 
+let playerSelection = prompt(''); //Prompt this variable so it will not be static, also add the toLowerCase method to make your input case-insensitive.
+playerSelection = playerSelection.toLowerCase()
 const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
 console.log(computerSelection)
