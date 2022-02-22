@@ -90,6 +90,14 @@ let computerScore = parseInt(0);
 
 let game = () => {
 
+    //Create a FOR LOOP inside this function to play 5 rounds.
+
+    for(i = 0; i < 5; i++ ) {
+
+        //Inside this LOOP call the playRound function,
+        // along with both playerSelection and computerSelection and playerSelection toLoweerCase.
+    }
+
 }
 
 game()
