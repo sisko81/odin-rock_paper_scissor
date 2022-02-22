@@ -106,6 +106,20 @@ let game = () => {
         console.log(playRound(playerSelection, computerSelection));
         console.log('player score:' + playerScore);
         console.log('computer score:' + computerScore);
+
+        //Inside this LOOP write an IF statement to show winner after winner 5 rounds.
+
+        if(playerScore === 5) {
+            console.log('Congratulations you won the game!!')
+            return;
+            
+        } else if(computerScore === 5) {
+            console.log('You lose the game try again')
+            return;
+            
+        } else{
+           
+        }
     }
 
 }
