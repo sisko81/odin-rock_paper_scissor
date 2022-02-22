@@ -80,6 +80,13 @@ console.log(computerSelection);
 //Before moving on turn the playRound function into an arrow function.
 
 //Create the final function name it game() and make it an arrow function.
+//This function will keep score and display a winner at the end after 5 rounds.
+//Outside the function declare two variables to keep score of the game.
+
+let playerScore = parseInt(0); //These variables will be incremented after player or computer win a round
+let computerScore = parseInt(0);
+
+
 
 let game = () => {
 
