@@ -68,11 +68,8 @@ let playRound = (playerSelection, computerSelection) => {
  //also catch the logic inside the above IF statement
  // along with the computerSelection variable.
 
-let playerSelection = prompt(''); //Prompt this variable so it will not be static, also add the toLowerCase method to make your input case-insensitive.
-playerSelection = playerSelection.toLowerCase();
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
-console.log(computerSelection);
+
+
 
 
 //At this point you should be able to play a single round in the console with the code above.
@@ -92,10 +89,15 @@ let game = () => {
 
     //Create a FOR LOOP inside this function to play 5 rounds.
 
-    for(i = 0; i < 5; i++ ) {
+    for(i = 0; i < 15; i++ ) { //To be safe LOOP 15 times to cover the draw rounds
 
-        //Inside this LOOP call the playRound function,
-        // along with both playerSelection and computerSelection and playerSelection toLoweerCase.
+        //Inside this LOOP call the playRound function.
+        //Add playerSelection, computerSelection and playerSelection toLoweerCase.
+
+        let playerSelection = prompt(''); //Prompt this variable so it will not be static, also add the toLowerCase method to make your input case-insensitive.
+        playerSelection = playerSelection.toLowerCase();
+        const computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
     }
 
 }
