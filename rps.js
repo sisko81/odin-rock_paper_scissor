@@ -100,21 +100,21 @@ let game = () => {
         //Inside this LOOP call the playRound function.
         //Add playerSelection, computerSelection and playerSelection toLoweerCase.
 
-        let playerSelection = prompt(''); //Prompt this variable so it will not be static, also add the toLowerCase method to make your input case-insensitive.
+        let playerSelection = prompt('Please make a move'); //Prompt this variable so it will not be static, also add the toLowerCase method to make your input case-insensitive.
         playerSelection = playerSelection.toLowerCase();
         const computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log('player score:' + playerScore);
-        console.log('computer score:' + computerScore);
+        alert(playRound(playerSelection, computerSelection));
+        alert('player score: ' + playerScore + ' VS ' +  ' computer score:' + computerScore);
+        //alert('computer score:' + computerScore);
 
         //Inside this LOOP write an IF statement to show winner after winner 5 rounds.
 
         if(playerScore === 5) {
-            console.log('Congratulations you won the game!!')
+            alert('Congratulations you won the game!!')
             return;
             
         } else if(computerScore === 5) {
-            console.log('You lose the game try again')
+            alert('You lose the game try again')
             return;
             
         } else{
