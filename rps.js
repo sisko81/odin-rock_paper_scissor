@@ -42,16 +42,22 @@ let playRound = (playerSelection, computerSelection) => {
     if(playerSelection ===  computerSelection) {
         return 'draw'; // A draw will be returned IF playerSelection and computerSelection match.
     } else if(playerSelection === 'rock' && computerSelection === 'scissor') {
+        playerScore++
         return 'You win! Rock breaks Scissor' //IF the playerSelection is 'rock' AND computerSelection is 'scissor' the player wins the round.The rest of the code block follow the same logic.
     } else if(playerSelection === 'rock' && computerSelection === 'paper') {
+        computerScore++
         return 'You lose! paper beats rock' 
     } else if(playerSelection === 'paper' && computerSelection === 'rock') {
+        playerScore++
         return 'You Win! Paper covers rock' 
     } else if(playerSelection === 'paper' && computerSelection === 'scissor') {
+        computerScore++
         return 'You lose! scissor beats paper' 
     } else if(playerSelection === 'scissor' && computerSelection === 'paper') {
+        playerScore++
         return 'You Win! Scissor cuts paper' 
     } else if(playerSelection === 'scissor' && computerSelection === 'rock') {
+        computerScore++
         return 'You lose! rock beats scissor' 
     }
 
@@ -81,7 +87,7 @@ let playRound = (playerSelection, computerSelection) => {
 //Outside the function declare two variables to keep score of the game.
 
 let playerScore = parseInt(0); //These variables will be incremented after player or computer win a round
-let computerScore = parseInt(0);
+let computerScore = parseInt(0);// Increment inside the playRound IF statement above. Console.log the output.
 
 
 
@@ -98,6 +104,8 @@ let game = () => {
         playerSelection = playerSelection.toLowerCase();
         const computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection));
+        console.log('player score:' + playerScore);
+        console.log('computer score:' + computerScore);
     }
 
 }
