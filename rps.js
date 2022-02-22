@@ -95,7 +95,7 @@ let game = () => {
 
     //Create a FOR LOOP inside this function to play 5 rounds.
 
-    for(i = 0; i < 15; i++ ) { //To be safe LOOP 15 times to cover the draw rounds
+    for(i = 0; i < 20; i++ ) { //To be safe LOOP 15 0r 20 times to cover the draw rounds
 
         //Inside this LOOP call the playRound function.
         //Add playerSelection, computerSelection and playerSelection toLoweerCase.
