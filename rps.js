@@ -69,13 +69,13 @@ function playRound(playerSelection, computerSelection) {
  // along with the computerSelection variable.
 
 let playerSelection = prompt(''); //Prompt this variable so it will not be static, also add the toLowerCase method to make your input case-insensitive.
-playerSelection = playerSelection.toLowerCase()
+playerSelection = playerSelection.toLowerCase();
 const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
-console.log(computerSelection)
+console.log(computerSelection);
 
 
-//At this point you should be able to play a single round in the console.
+//At this point you should be able to play a single round in the console with the code above.
 
 
 
