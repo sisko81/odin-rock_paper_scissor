@@ -95,10 +95,10 @@ let game = () => {
 
     //Create a FOR LOOP inside this function to play 5 rounds.
 
-    for(i = 0; i < 20; i++ ) { //To be safe LOOP 15 0r 20 times to cover the draw rounds
+      //To be safe LOOP 15 0r 20 times to cover the draw rounds
 
         //Inside this LOOP call the playRound function.
-        //Add playerSelection, computerSelection and playerSelection toLoweerCase.
+        //Add playerSelection, computerSelection and playerSelection toLowerCase.
 
         let playerSelection = prompt('Please make a move'); //Prompt this variable so it will not be static, also add the toLowerCase method to make your input case-insensitive.
         playerSelection = playerSelection.toLowerCase();
@@ -109,20 +109,10 @@ let game = () => {
 
         //Inside this LOOP write an IF statement to show winner after winner 5 rounds.
 
-        if(playerScore === 5) {
-            alert('Congratulations you won the game!!')
-            return;
-            
-        } else if(computerScore === 5) {
-            alert('You lose the game try again')
-            return;
-            
-        } else{
-           
-        }
+        
     }
 
-}
+
 
 game()
 
