@@ -143,14 +143,21 @@ game();
 
 
 
+
 function uiGame() {
   const buttons = document.querySelectorAll('button');
   buttons.forEach((button) => {
     button.addEventListener('click', playRound => {
+
+        const rock = document.querySelector('#r');
+        
+          rock.textContent = 'Player selection: ' + button.innerText
+        
+
     //console.log(button.id);
 
-    const results = document.querySelector('#result')
-    results.textContent = 'Results:' + ' Player score ' + `${playerScore}` + ' vs' + ' Computer score' + ` ${computerScore}` //`${playerScore} ` + `${computerScore}`
+      const results = document.querySelector('#result')
+      results.textContent = 'Results:' + ' Player score ' + `${playerScore}` + ' vs' + ' Computer score' + ` ${computerScore}` //`${playerScore} ` + `${computerScore}`
    
 
   })
