@@ -1,3 +1,8 @@
+
+
+
+
+
 // Create a function with the name computerPlay
 
 let computerPlay = () => {
@@ -93,9 +98,9 @@ let computerScore = parseInt(0);// Increment inside the playRound IF statement a
 
 let game = () => {
 
-    //Create a FOR LOOP inside this function to play 5 rounds.
-
-      //To be safe LOOP 15 0r 20 times to cover the draw rounds
+    
+    
+    for(let i = 0; playerScore || computerScore < 5; i++ ) { // With this logic IF playerScore or computerScore reach 5 a decision is made regardless of the draw count
 
         //Inside this LOOP call the playRound function.
         //Add playerSelection, computerSelection and playerSelection toLowerCase.
@@ -109,10 +114,33 @@ let game = () => {
 
         //Inside this LOOP write an IF statement to show winner after winner 5 rounds.
 
-        
+        if(playerScore === 5) {
+            alert('You CRUSHED the opposition with a glorious victory!')
+            return;
+            
+        } else if(computerScore === 5) {
+            alert(' Pathetic, You Suck!')
+            return;
+            
+        } 
     }
 
+}
+
+game();
 
 
-game()
 
+//const interfaceGame = () => {
+   // const btnRock = document.querySelector('#rock');
+  //  btnRock.addEventListener('click', playRound => {
+
+     //  console.log('hello world');
+     //  document.querySelector('#output').textContent = "hello world i'm a rock"
+      
+      
+  //  }) 
+
+//}
+
+//interfaceGame()
