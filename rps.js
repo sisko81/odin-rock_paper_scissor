@@ -6,6 +6,7 @@
 // Create a function with the name computerPlay
 
 let computerPlay = () => {
+
     
     //Inside this function declare two variables.
 
@@ -39,6 +40,7 @@ let computerPlay = () => {
 //Name the function playRound, and give it two parameters named playerSelection and computerSelection.
 
 let playRound = (playerSelection, computerSelection) => {
+    
 
     //return a string that states the winner of the round 
     //like so: You win! Rock beats Scissor.
@@ -100,16 +102,16 @@ let game = () => {
 
     
     
-    for(let i = 0; playerScore || computerScore < 5; i++ ) { // With this logic IF playerScore or computerScore reach 5 a decision is made regardless of the draw count
+  //  for(let i = 0; playerScore || computerScore < 5; i++ ) { // With this logic IF playerScore or computerScore reach 5 a decision is made regardless of the draw count
 
         //Inside this LOOP call the playRound function.
         //Add playerSelection, computerSelection and playerSelection toLowerCase.
 
-        let playerSelection = prompt('Please make a move'); //Prompt this variable so it will not be static, also add the toLowerCase method to make your input case-insensitive.
+        let playerSelection = ''; //Prompt this variable so it will not be static, also add the toLowerCase method to make your input case-insensitive.
         playerSelection = playerSelection.toLowerCase();
         const computerSelection = computerPlay();
-        alert(playRound(playerSelection, computerSelection));
-        alert('player score: ' + playerScore + ' VS ' +  ' computer score:' + computerScore);
+        //alert(playRound(playerSelection, computerSelection));
+        //alert('player score: ' + playerScore + ' VS ' +  ' computer score:' + computerScore);
         //alert('computer score:' + computerScore);
 
         //Inside this LOOP write an IF statement to show winner after winner 5 rounds.
@@ -120,10 +122,9 @@ let game = () => {
             
         } else if(computerScore === 5) {
             alert(' Pathetic, You Suck!')
-            return;
-            
+            return; 
         } 
-    }
+   // }
 
 }
 
@@ -131,16 +132,30 @@ game();
 
 
 
-//const interfaceGame = () => {
-   // const btnRock = document.querySelector('#rock');
-  //  btnRock.addEventListener('click', playRound => {
 
-     //  console.log('hello world');
-     //  document.querySelector('#output').textContent = "hello world i'm a rock"
-      
-      
-  //  }) 
 
-//}
 
-//interfaceGame()
+
+
+
+
+
+
+
+
+function uiGame() {
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach((button) => {
+    button.addEventListener('click', playRound => {
+    //console.log(button.id);
+
+    const results = document.querySelector('#result')
+    results.textContent = 'Results:' + ' Player score ' + `${playerScore}` + ' vs' + ' Computer score' + ` ${computerScore}` //`${playerScore} ` + `${computerScore}`
+   
+
+  })
+})
+
+}
+
+uiGame()
