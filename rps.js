@@ -38,7 +38,7 @@ let computerScore = 0;// Increment inside the playRound IF statement above. Cons
 
 const game = () => {
 
-    for(let i = 0; playerScore || computerScore < 5; i++ ) { // With this logic IF playerScore or computerScore reach 5 a decision is made regardless of the draw count
+    
 
         let playerSelection = prompt('type', ''); //Prompt this variable so it will not be static, also add the toLowerCase method to make your input case-insensitive.
         playerSelection = playerSelection.toLowerCase();
@@ -55,7 +55,7 @@ const game = () => {
             alert(' Pathetic, You Suck!')
             return; 
         } 
-    }
+    
 
 }
 
