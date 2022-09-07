@@ -9,7 +9,9 @@ const buttons = document.querySelectorAll('button');
 
 buttons.forEach(button => {
     button.addEventListener('click', (e) => {
-      playerSelection = e.target.dispatchEvent;
+      playerSelection = e.target.id;
+      playerSelectionShowCase.innerHTML = playerSelection
+      console.log(playerSelection)
     })
 })
 
@@ -21,7 +23,7 @@ let computerPlay = () => {
     return computerRandomList;
 }
 
-let playRound = (playerSelection, computerSelection) => {
+let playRound = () => {
     if(playerSelection ===  computerSelection) {
         return 'draw'; // A draw will be returned IF playerSelection and computerSelection match.
     } else if(playerSelection === 'rock' && computerSelection === 'scissor') {
@@ -52,7 +54,7 @@ let playerScore = 0; //These variables will be incremented after player or compu
 let computerScore = 0;// Increment inside the playRound IF statement above. Console.log the output.
 
 const game = () => {
-        let playerSelection; 
+        
         const computerSelection = computerPlay();
         (playRound(playerSelection, computerSelection));
         ('player score: ' + playerScore + ' VS ' +  ' computer score:' + computerScore);
