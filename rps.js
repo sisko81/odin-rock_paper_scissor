@@ -40,19 +40,18 @@ const game = () => {
 
     
 
-        let playerSelection = prompt('type', ''); //Prompt this variable so it will not be static, also add the toLowerCase method to make your input case-insensitive.
-        playerSelection = playerSelection.toLowerCase();
+        let playerSelection; 
         const computerSelection = computerPlay();
-        alert(playRound(playerSelection, computerSelection));
-        alert('player score: ' + playerScore + ' VS ' +  ' computer score:' + computerScore);
-        alert('computer score:' + computerScore);
+        (playRound(playerSelection, computerSelection));
+        ('player score: ' + playerScore + ' VS ' +  ' computer score:' + computerScore);
+        ('computer score:' + computerScore);
 
         if(playerScore === 5) {
-            alert('You CRUSHED the opposition with a glorious victory!')
+            ('You CRUSHED the opposition with a glorious victory!')
             return;
             
         } else if(computerScore === 5) {
-            alert(' Pathetic, You Suck!')
+            (' Pathetic, You Suck!')
             return; 
         } 
     
