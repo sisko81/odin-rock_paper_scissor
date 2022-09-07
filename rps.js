@@ -1,8 +1,12 @@
 //DOM Elements
 const playerSelectionShowCase = document.querySelector('#player-selection');
-let playerSelection
+let playerSelection;
+
 const computerSelectionShowCase = document.querySelector('#computer-selection');
-let computerSelection
+let computerSelection;
+
+// Create a function with the name computerPlay
+
 
 //Create three buttons
 const buttons = document.querySelectorAll('button');
@@ -10,40 +14,43 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
     button.addEventListener('click', (e) => {
       playerSelection = e.target.id;
-      playerSelectionShowCase.innerHTML = playerSelection
-      console.log(playerSelection)
+      playerSelectionShowCase.textContent = playerSelection;
+      console.log(playerSelection);
+      console.log(computerPlay());
     })
 })
 
-// Create a function with the name computerPlay
-let computerPlay = () => {
-    let computerList = ['rock', 'paper', 'scissor'];
-    let computerRandomList = computerList[Math.floor(Math.random() * computerList.length)];
+const computerPlay = () => {
+    computerSelection = ['rock', 'paper', 'scissors'];
+    let computerRandomList = computerSelection[Math.floor(Math.random() * computerSelection.length)];
+
+    computerSelectionShowCase.textContent = computerRandomList
 
     return computerRandomList;
 }
 
+
 let playRound = () => {
     if(playerSelection ===  computerSelection) {
         return 'draw'; // A draw will be returned IF playerSelection and computerSelection match.
-    } else if(playerSelection === 'rock' && computerSelection === 'scissor') {
+    } else if(playerSelection === 'rock' && computerSelection === 'scissors') {
         playerScore++
-        return 'You win! Rock breaks Scissor' //IF the playerSelection is 'rock' AND computerSelection is 'scissor' the player wins the round.The rest of the code block follow the same logic.
+        return 'You win! Rock breaks Scissors' //IF the playerSelection is 'rock' AND computerSelection is 'scissors' the player wins the round.The rest of the code block follow the same logic.
     } else if(playerSelection === 'rock' && computerSelection === 'paper') {
         computerScore++
         return 'You lose! paper beats rock' 
     } else if(playerSelection === 'paper' && computerSelection === 'rock') {
         playerScore++
         return 'You Win! Paper covers rock' 
-    } else if(playerSelection === 'paper' && computerSelection === 'scissor') {
+    } else if(playerSelection === 'paper' && computerSelection === 'scissors') {
         computerScore++
-        return 'You lose! scissor beats paper' 
-    } else if(playerSelection === 'scissor' && computerSelection === 'paper') {
+        return 'You lose! scissors beats paper' 
+    } else if(playerSelection === 'scissors' && computerSelection === 'paper') {
         playerScore++
-        return 'You Win! Scissor cuts paper' 
-    } else if(playerSelection === 'scissor' && computerSelection === 'rock') {
+        return 'You Win! Scissors cuts paper' 
+    } else if(playerSelection === 'scissors' && computerSelection === 'rock') {
         computerScore++
-        return 'You lose! rock beats scissor' 
+        return 'You lose! rock beats scissors' 
     }
 
     //return the parameters to store the values.
