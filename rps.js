@@ -29,7 +29,7 @@ buttons.forEach(button => {
       console.log(`1: foreach function: Computer selection: ${computerSelection}`)
       console.log(`playRound() function inside foreach: ${playRound()}`)
       console.log(`2: foreach function: Results: ${result}`)
-      
+      endGame()
     })
 })
 
@@ -79,4 +79,14 @@ const playRound = () => {
     }
      resultShowCase.textContent = result
      console.log('playround function outside Result:', result)
+}
+
+const endGame = () => {
+    if(playerScore == 5) {
+        endResult = 'Player win the game'
+    }
+    else if(computerScore == 5) {
+        endResult = 'Computer win the game'
+    }
+    endResultShowCase.textContent = endResult
 }
