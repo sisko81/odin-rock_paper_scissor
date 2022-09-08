@@ -39,9 +39,27 @@ const computerPlay = () => {
 
 const playRound = () => {
     if(playerSelection === computerSelection) {
-        result = 'Draw'
-        
+        result = 'Draw'  
     }
+    else if(playerSelection === 'rock' && computerSelection === 'scissors') {
+        result = 'You Rock!! rock cracks scissors'
+    }
+    else if(playerSelection === 'rock' && computerSelection === 'paper') {
+        result = 'Computer win paper beats rock'
+    }
+    else if(playerSelection === 'paper' && computerSelection === 'rock') {
+        result = 'Player win! paper covers rock'
+    }
+    else if(playerSelection === 'paper' && computerSelection === 'scissors') {
+        result = 'Computer win scissors beats paper'
+    }
+    else if(playerSelection === 'scissors' && computerSelection === 'paper') {
+        result = 'Player win! scissors cut paper'
+    }
+    else if(playerSelection === 'scissors' && computerSelection === 'rock') {
+        result = 'Computer win rock beats scissors'
+    }
+
      resultShowCase.textContent = result
      console.log('playround function outside Result:', result)
 }
