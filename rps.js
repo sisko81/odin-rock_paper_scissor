@@ -14,6 +14,9 @@ let computerSelection;
 const resultShowCase = document.querySelector('#result');
 let result;
 
+const endResultShowCase = document.querySelector('#end-result');
+let endResult;
+
 //Create three buttons
 const buttons = document.querySelectorAll('button');
 
