@@ -1,4 +1,10 @@
 //DOM Elements
+const playerScoreShowCase = document.querySelector('#p-score');
+let playerScore = 0; 
+
+const computerScoreShowCase = document.querySelector('#c-score');
+let computerScore = 0;
+
 const playerSelectionShowCase = document.querySelector('#player-selection');
 let playerSelection;
 
@@ -7,9 +13,6 @@ let computerSelection;
 
 const resultShowCase = document.querySelector('#result');
 let result;
-
-// Create a function with the name computerPlay
-
 
 //Create three buttons
 const buttons = document.querySelectorAll('button');
@@ -42,39 +45,35 @@ const playRound = () => {
         result = 'Draw'  
     }
     else if(playerSelection === 'rock' && computerSelection === 'scissors') {
-        result = 'You Rock!! rock cracks scissors'
+        result = 'You Rock!! rock cracks scissors';
+        playerScore++;
+        playerScoreShowCase.textContent = playerScore
     }
     else if(playerSelection === 'rock' && computerSelection === 'paper') {
-        result = 'Computer win paper beats rock'
+        result = 'Computer win paper beats rock';
+        computerScore++;
+        computerScoreShowCase.textContent = computerScore
     }
     else if(playerSelection === 'paper' && computerSelection === 'rock') {
-        result = 'Player win! paper covers rock'
+        result = 'Player win! paper covers rock';
+        playerScore++;
+        playerScoreShowCase.textContent = playerScore
     }
     else if(playerSelection === 'paper' && computerSelection === 'scissors') {
-        result = 'Computer win scissors beats paper'
+        result = 'Computer win scissors beats paper';
+        computerScore++;
+        computerScoreShowCase.textContent = computerScore
     }
     else if(playerSelection === 'scissors' && computerSelection === 'paper') {
-        result = 'Player win! scissors cut paper'
+        result = 'Player win! scissors cut paper';
+        playerScore++;
+        playerScoreShowCase.textContent = playerScore
     }
     else if(playerSelection === 'scissors' && computerSelection === 'rock') {
-        result = 'Computer win rock beats scissors'
+        result = 'Computer win rock beats scissors';
+        computerScore++;
+        computerScoreShowCase.textContent = computerScore
     }
-
      resultShowCase.textContent = result
      console.log('playround function outside Result:', result)
 }
-
-
-let playerScore = 0; //These variables will be incremented after player or computer win a round
-let computerScore = 0;// Increment inside the playRound IF statement above. Console.log the output.
-
-const game = () => {
-        
-        
-      
-}
-
-game();
-
-
-
