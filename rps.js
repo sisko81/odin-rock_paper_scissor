@@ -30,9 +30,7 @@ buttons.forEach(button => {
       playerSelectionShowCase.textContent = playerSelection;
       console.log(`Player Selection: ${playerSelection}`);
       computerSelection = computerPlay();
-      console.log(`1: foreach function: Computer selection: ${computerSelection}`)
-      console.log(`playRound() function inside foreach: ${playRound()}`)
-      console.log(`2: foreach function: Results: ${result}`)
+      playRound()
       endGame()
     })
 })
@@ -81,12 +79,11 @@ const playRound = () => {
         computerScore++;
         computerScoreShowCase.textContent = computerScore
     }
-    playerScoreShowCase.style.fontSize = '44px'
-     computerScoreShowCase.style.fontSize = '44px'
+    playerScoreShowCase.style.fontSize = '24px'
+     computerScoreShowCase.style.fontSize = '24px'
      playerScoreShowCase.style.color = 'green'
      computerScoreShowCase.style.color = 'red'
      resultShowCase.textContent = result
-     console.log('playround function outside Result:', result)
 }
 
 const endGame = () => {
@@ -94,20 +91,21 @@ const endGame = () => {
         btnContainer.textContent = 'PLAYER WON THE GAME';
         btnContainer.style.fontSize = '35px';
         btnContainer.style.color = 'green';
-        reload.style.visibility = 'visible'
+        reload.style.visibility = 'visible';
+
         reload.addEventListener('click', () => {
-            window.location.reload()
+          window.location.reload()
         })
     }
     else if(computerScore == 5) {
         btnContainer.textContent = 'COMPUTER WON GAME OVER';
-        btnContainer.style.fontSize = '35px'
+        btnContainer.style.fontSize = '35px';
         btnContainer.style.color = 'red';
-        reload.style.visibility = 'visible'
+        reload.style.visibility = 'visible';
+
         reload.addEventListener('click', () => {
-            window.location.reload()
+          window.location.reload()
         })
     }
-    
     endResultShowCase.textContent = endResult
 }
