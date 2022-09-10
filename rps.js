@@ -17,6 +17,10 @@ let result;
 const endResultShowCase = document.querySelector('#end-result');
 let endResult;
 
+const btnContainer = document.querySelector('#btn-container');
+
+const reload = document.querySelector('#reload');
+
 //Create three buttons
 const buttons = document.querySelectorAll('button');
 
@@ -77,16 +81,33 @@ const playRound = () => {
         computerScore++;
         computerScoreShowCase.textContent = computerScore
     }
+    playerScoreShowCase.style.fontSize = '44px'
+     computerScoreShowCase.style.fontSize = '44px'
+     playerScoreShowCase.style.color = 'green'
+     computerScoreShowCase.style.color = 'red'
      resultShowCase.textContent = result
      console.log('playround function outside Result:', result)
 }
 
 const endGame = () => {
     if(playerScore == 5) {
-        endResult = 'Player win the game'
+        btnContainer.textContent = 'PLAYER WON THE GAME';
+        btnContainer.style.fontSize = '35px';
+        btnContainer.style.color = 'green';
+        reload.style.visibility = 'visible'
+        reload.addEventListener('click', () => {
+            window.location.reload()
+        })
     }
     else if(computerScore == 5) {
-        endResult = 'Computer win the game'
+        btnContainer.textContent = 'COMPUTER WON GAME OVER';
+        btnContainer.style.fontSize = '35px'
+        btnContainer.style.color = 'red';
+        reload.style.visibility = 'visible'
+        reload.addEventListener('click', () => {
+            window.location.reload()
+        })
     }
+    
     endResultShowCase.textContent = endResult
 }
