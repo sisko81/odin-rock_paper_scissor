@@ -50,37 +50,37 @@ const playRound = () => {
         result = 'Draw'  
     }
     else if(playerSelection === 'rock' && computerSelection === 'scissors') {
-        result = 'You Rock!! rock cracks scissors';
+        result = 'You Win!! rock cracks scissors';
         playerScore++;
         playerScoreShowCase.textContent = playerScore
     }
     else if(playerSelection === 'rock' && computerSelection === 'paper') {
-        result = 'Computer win paper beats rock';
+        result = 'AI win paper beats rock';
         computerScore++;
         computerScoreShowCase.textContent = computerScore
     }
     else if(playerSelection === 'paper' && computerSelection === 'rock') {
-        result = 'Player win! paper covers rock';
+        result = 'You win! paper covers rock';
         playerScore++;
         playerScoreShowCase.textContent = playerScore
     }
     else if(playerSelection === 'paper' && computerSelection === 'scissors') {
-        result = 'Computer win scissors beats paper';
+        result = 'AI win scissors beats paper';
         computerScore++;
         computerScoreShowCase.textContent = computerScore
     }
     else if(playerSelection === 'scissors' && computerSelection === 'paper') {
-        result = 'Player win! scissors cut paper';
+        result = 'You win! scissors cut paper';
         playerScore++;
         playerScoreShowCase.textContent = playerScore
     }
     else if(playerSelection === 'scissors' && computerSelection === 'rock') {
-        result = 'Computer win rock beats scissors';
+        result = 'AI win rock beats scissors';
         computerScore++;
         computerScoreShowCase.textContent = computerScore
     }
-    playerScoreShowCase.style.fontSize = '24px'
-     computerScoreShowCase.style.fontSize = '24px'
+    playerScoreShowCase.style.fontSize = '50px'
+     computerScoreShowCase.style.fontSize = '50px'
      playerScoreShowCase.style.color = 'green'
      computerScoreShowCase.style.color = 'red'
      resultShowCase.textContent = result
@@ -98,7 +98,7 @@ const endGame = () => {
         })
     }
     else if(computerScore == 5) {
-        btnContainer.textContent = 'COMPUTER WON GAME OVER';
+        btnContainer.textContent = 'AI WON GAME OVER';
         btnContainer.style.fontSize = '35px';
         btnContainer.style.color = 'red';
         reload.style.visibility = 'visible';
